@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>forms demo</title>
+    </head>
+    <body>
+        <h2>forms attributes</h2>
+        <forms oninput="a.value=parseInt(x.value)+parseInt(y.value)">
+            <label for="fname">Firstname:</label>
+            <input type="text" name="fname" id="fname"><br><br>
+            <label for="lname">Lastname:</label>
+            <input type="text" name="lname" id="lname"><br><br>
+            <label for="emailid">Email id:</label>
+            <input type="email" name="email" id="email"><br><br>
+            <label for="birthday">Date Of Birth</label>
+            <input type="date" name="birthday" id="birthday"><br><br>
+            <label for="number">Mobile no:</label>
+            <input type="tel" name="number" id="number" placeholder="12345 67890" pattern="[0-9]{5}-[0-9]{5}" required><br><br>
+            <button type="button" name="enter" id="submit" value="Enter">enter</button><br><br>
+            
+            <label for="gender">gender : </label>
+            <input type="radio" name="gender" id="gender">
+            <label for="gender">Male</label>
+            <input type="radio" name="gender" id="gender">
+            <label for="gender">Female</label>
+            <input type="radio" name="gender" id="gender">
+            <label for="gender">Others</label><br><br>
+
+            <label for="sub"><b>subjects:</b></label><br>
+            <input type="checkbox" name="sub" id="sub">
+            <label for="sub">DM</label><br>
+            <input type="checkbox" name="sub" id="sub">
+            <label for="sub">DSP</label><br>
+            <input type="checkbox" name="sub" id="sub">
+            <label for="sub">WAD</label><br>
+            <input type="checkbox" name="sub" id="sub">
+            <label for="sub">DBMS</label><br>
+            <input type="checkbox" name="sub" id="sub">
+            <label for="sub">OS</label><br><br>
+
+            <label for="text">Welcome text&emsp;</label>
+            <textarea name="text" id="text" cols="30" rows="3">hello there!!!!!!!!! I'm Yesaswini Devi Pendem of 2nd year btech ai&ds branch. Hooooooope u'll doin' goooooooooooooood.</textarea> <br><br>
+            
+            <input type="submit" name="submit"><br>
+            <br>
+            <fieldset form="">
+                <legend >Personal info</legend>
+                <label for="fname">Firstname:</label>
+                <input type="text" name="fname" id="fname"><br><br>
+                <label for="lname">Lastname:</label>
+                <input type="text" name="lname" id="lname"><br><br>
+                <label for="emailid">Email id:</label>
+                <input type="email" name="email" id="email"><br><br>
+                <label for="birthday">Date Of Birth</label>
+                <input type="date" name="birthday" id="birthday"><br><br>
+                <label for="number">Mobile no:</label>
+                <select size="1" >
+                    <option value="">+91</option>
+                    <option value="">+92</option>
+                    <option value="">+101</option>
+                    <option value="">+104</option>
+                    <option value="">+202</option>
+                    <option value="">+404</option>
+                </select>
+                <input type="tel" name="number" id="number" placeholder="12345 67890" pattern="[0-9]{5}-[0-9]{5}" required><br><br>
+                
+                <input type="submit" name="submit"><br><br>
+            </fieldset>
+            <br>
+            <label for="food">favourite food:</label>
+            <select name="food" id="food" value="ramen noodles">
+                <option value="-1">--select--</option>
+            <optgroup label="southern">
+                <option value="">idli</option>
+                <option value="">dosa</option>
+                <option value="">sambar</option>
+            </optgroup>
+            <optgroup label="northern">
+                <option value="roti">roti</option>
+                <option value="">chapathi</option>
+                <option value="">other</option>
+            </optgroup>
+            <optgroup label="italian">
+                <option value="intalian food">italian food</option>
+            </optgroup>
+            <optgroup label="chinese">
+                <option value="">instant noodles</option>
+                <option value="">hot soup</option>
+                <option value="frogs">stir fried tofu</option>
+            </optgroup>
+            <optgroup label="korean">
+                <option value="">ramen noodles</option>
+                <option value="">kimchi</option>
+                <option value="">yogurt</option>
+            </optgroup>
+            </select>
+            <br><br>
+
+            <object data="download.jpg" width="100" height="100"></object><br><br>
+            <br>
+            <input type="range" name="x" id="x" value="30">
+            +
+            <input type="number" naem="y" id="y" value="70">
+            <br><br>
+            <output form="text" name="a" id="a" for="x+y"></output>
+            <br>
+
+            <label for="yesh">Yesh's overview</label>
+            <meter id="Yesh" name="yesh" min="0" max="100" low="70" high="95" value="85"></meter><br><br>
+
+        </forms>
+    </body>
+</html>
