@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>calculator</title>
+    <style>
+      tr{
+        text-align: center;
+      }
+      .botton{
+        font-size: 20px
+      }
+    </style>
+    <script>
+      function display(value){
+        document.getElementById("a").value+=value;
+      }
+      function cal(){
+        var n1 = document.getElementById("a").value;
+        var n2 = eval(n1);
+        document.getElementById("a").value=n2;
+      }
+      function remove(){
+        const text = document.getElementById("a").value;
+        document.getElementById("a").value=text.slice(0, -1);
+      }
+    </script>
+  </head>
+  <body>
+    <center>
+      <h1>CALCULATOR</h1>
+      <form action="">
+        <table border="2px" cellspacing="2px" cellpadding="10px">
+          <tbody>
+            <tr>
+              <td colspan="3">
+                <input type="text" name="" id="a" placeholder="0">
+              </td>
+              <td>
+                <input type="button" class="button" value="<-" onclick="remove()">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="button" class="button" value="0" onclick="display('0')">
+              </td>
+              <td>
+                <input type="button" class="button" value="1" onclick="display('1')">
+              </td>
+              <td>
+                <input type="button" class="button" value="2" onclick="display('2')">
+              </td>
+              <td>
+                <input type="button" class="button" value="+" onclick="display('+')">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="button" class="button" value="3" onclick="display('3')">
+              </td>
+              <td>
+                <input type="button" class="button" value="4" onclick="display('4')">
+              </td>
+              <td>
+                <input type="button" class="button" value="5" onclick="display('5')">
+              </td>
+              <td>
+                <input type="button" class="button" value="-" onclick="display('-')">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="button" class="button" value="6" onclick="display('6')">
+              </td>
+              <td>
+                <input type="button" class="button" value="7" onclick="display('7')">
+              </td>
+              <td>
+                <input type="button" class="button" value="8" onclick="display('8')">
+              </td>
+              <td>
+                <input type="button" class="button" value="*" onclick="display('*')">
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input type="button" class="button" value="9" onclick="display('9')">
+              </td>
+              <td>
+                <input type="button" class="button" value="C">
+              </td>
+              <td>
+                <input type="button" class="button" value="=" onclick="cal()">
+              </td>
+              <td>
+                <input type="button" class="button" value="/" onclick="display('/')">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
+    </center>
+  </body>
+</html>
