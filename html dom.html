@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML DOM</title>
+        <script>
+            function change(){
+                var element = document.getElementById("ai");
+                alert(element.innerHTML);
+                element.innerHTML = "Dept of Artificial Intelligence";
+                var element1 = document.getElementsByClassName("result");
+                element1[1].innerHTML = "Results will be updated soon";
+                var element2 = document.getElementsByTagName("h2");
+                element2[0].innerHTML += " of II-II";
+                var element4 = document.getElementsByTagName("h2");
+                element4[0].align="center";
+            }
+            function add(){
+                var elem = document.getElementsByTagName("h3")[0].innerHTML+document.getElementsByTagName("h3")[1].innerHTML;
+                alert(elem);
+            }
+            function onchange(ele){
+                ele.innerHTML="II-II results"
+            }
+        
+        </script>
+    </head>
+    <body>
+        <h1 id="ai" onclick="this.innerHTML='Dept of CSE'">Dept of AI</h1>
+        <p>Welcome to WAD Class</p>
+        <h2 class="result" align="left" onclick="onchange(this)">YesaswiniDevi</h2>
+        <span class="result"></span>
+        <input type="button" value="Change Data" onClick="change()">
+        <h3>7</h3>
+        <h3>5</h3>
+        <input type="button" value="Addition" onClick="add()">
+    </body>
+</html>
