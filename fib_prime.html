@@ -1,0 +1,106 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fact_fib_prime_pal</title>
+    <style>
+        .b1{
+            width:130px;
+            height:30px;
+            background-color:darkgray;
+            border-color: darkcyan;
+        }
+        #num{
+            margin-top: 40px;
+        }
+
+        input:hover{
+            background-color: pink;
+            
+        }
+    </style>
+	<script>
+		function fact(){
+			var num, fac, i;
+			num = document.getElementById('num').value;
+			fac = 1;
+			for(i = 1;i <= num; i++){
+				fac = fac * i;
+			}
+			document.getElementById("result").innerHTML= "Factorial of " + num +": " + fac;
+		}
+		function fib(){
+			var n = document.getElementById("num").value;
+			var n1,n2,n3,r;
+			n1 = 0,n2 = 1;
+			r = n1 + " " + n2;
+			for(var i = 1; i < n; i++)
+			{
+				n3 = n1 + n2;
+				n1 = n2;
+				n2 = n3;
+				r = r + " " + n3;
+			}
+			document.getElementById("result").innerHTML =  "The fibonocci series are: " + r;
+            
+		}
+		function is_prime(val){
+			res = true
+			for(var i = 2; i < val; i++){
+				if(val % i == 0){
+					res = false;
+					break;
+				}
+			}
+			return res
+		}
+		function prime(){
+			var num = document.getElementById('num').value;
+			if(num == 1){
+				document.getElementById("result").innerHTML =  num + "is neither prime nor composite";
+			}
+			if(num > 1){
+				ans = ""
+				for(var i = 2; i < num; i++){
+					if(is_prime(i)){
+						ans = ans + i + " "
+					}
+				}
+				document.getElementById("result").innerHTML =  "The Prime Numbers upto " + num + " are <br>" + ans ;
+			}
+			
+		}
+		function palindrome(){
+		var temp, sum= 0;
+		var n = document.getElementById("num").value;
+		temp = n;
+		while(n>0)
+		{
+			rem = n%10;
+			n = parseInt(n/10);
+			sum = sum*10 + rem;
+		}
+		if(sum==temp)
+		{
+			document.getElementById("result").innerHTML =temp +" is Palindrome";
+		}
+		else
+		{
+			document.getElementById("result").innerHTML =temp+" is not palindrome";
+		}
+	}
+
+	</script>
+</head>
+<body align = 'center'>
+	<form>
+		<input type="text" id="num" /><br><br><br>
+		<input type="button"class="b1" value="Factorial" onclick="fact()"/><br><br>
+	    <input type="button" class="b1" value="Fibonacci" onclick="fib()"/><br><br>
+		<input type="button" class="b1" value="Prime numbers" onclick="prime()"/><br><br>
+		<input type="button" class="b1" value="Palindrome" onclick="palindrome()"><br><br><br>
+		<p id="result" name = 'result'></p>
+	</form>
+</body>
+</html>
